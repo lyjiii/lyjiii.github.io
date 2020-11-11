@@ -33,10 +33,10 @@ jobs:
       # 设置SSH密钥，读取GITEE_RSA_PRIVATE_KEY
       - name: Setup private key
         env:
-          HEXO_DEPLOY_KEY: ${{ secrets.GITEE_RSA_PRIVATE_KEY }}
+          GITEE_RSA_PRIVATE_KEY: ${{ secrets.GITEE_RSA_PRIVATE_KEY }}
         run: |
           mkdir -p ~/.ssh/
-          echo "$HEXO_DEPLOY_KEY" > ~/.ssh/id_rsa
+          echo "$GITEE_RSA_PRIVATE_KEY" > ~/.ssh/id_rsa
           chmod 600 ~/.ssh/id_rsa
           ssh-keyscan github.com >> ~/.ssh/known_hosts
           ssh-keyscan gitee.com >> ~/.ssh/known_hosts
