@@ -1,6 +1,7 @@
 # 工作流名称
 name: Hexo Blog Deploy
 
+# 只在push到master分支时的时候启动
 on:
   push:
     branches: [ master ]
@@ -63,7 +64,7 @@ jobs:
           # 注意替换为你的 GitHub 源仓库地址
           source-repo: "git@github.com:lyjiii/lyjiii.github.io.git"
           # 注意替换为你的 Gitee 目标仓库地址
-          destination-repo: "liuyujunzuishuai/liuyujunzuishuai.git"
+          destination-repo: "git@gitee.com:liuyujunzuishuai/liuyujunzuishuai.git"
       
       # 部署Gitee Pages
       - name: Build Gitee Pages
