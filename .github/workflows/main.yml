@@ -5,6 +5,8 @@ name: Hexo Blog Deploy
 on:
   push:
     branches: [ master ]
+  pull_request:
+    branches: [ master ]
 
 # 使用ubuntu虚拟机
 jobs:
@@ -18,7 +20,7 @@ jobs:
     
     # 工作流步骤
     steps:
-      - uses: actions/checkout@v1
+      - uses: actions/checkout@v2
       - name: Use Node.js 14.x
         uses: actions/setup-node@v1
         with:
