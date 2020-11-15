@@ -1,0 +1,33 @@
+// Custom styles.
+
+// not show in mobile
+#idhyt-surprise-ball {
+  +mobile() {
+    display: none;
+  }
+}
+
+#idhyt-surprise-ball-animation {
+  +mobile() {
+    display: none;
+  }
+}
+
+// 主页文章添加阴影效果
+.post {
+  margin-top: 5px;
+  margin-bottom: 2px;
+  padding: 2px;
+  -webkit-box-shadow: 0 0 5px rgba(202, 203, 203, .5);
+  -moz-box-shadow: 0 0 5px rgba(202, 203, 204, .5);
+}
+
+//修改不蒜子数据颜色
+.busuanzi-value {
+  color: #1890ff;
+}
+
+// 回到顶部样式
+.back-to-top .fa-arrow-up:before{
+  color: rgb(random-color(0, 255) - 50%, random-color(0, 255) - 50%, random-color(0, 255) - 50%);
+}
